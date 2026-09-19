@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración | PERETTI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" type="image/png" href="img/logo/logo.png">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE ACCESO CON PIN -->
+    <div id="login-screen" class="login-container">
+        <div class="login-card">
+            <img src="img/logo/logo.png" alt="Logo Peretti" class="login-logo">
+            <h2>Panel de Edición</h2>
+            <p>Ingresá tu PIN para gestionar precios, fotos y promos de <strong>PERETTI</strong>.</p>
+
+            <form id="pin-form" onsubmit="return false;">
+                <div class="pin-input-group">
+                    <input type="password" id="admin-pin-input" maxlength="8" placeholder="PIN de 4 dígitos" autocomplete="off" required>
+                </div>
+                <button type="button" id="btn-login" class="btn-primary">Ingresar al Panel</button>
+                <div id="login-error" class="login-error-msg hidden">PIN incorrecto. Por favor verificalo.</div>
+            </form>
+
+            <div class="login-footer-link">
+                <a href="index.html">← Volver al Menú Público</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANEL DE ADMINISTRACIÓN (PROTEGIDO) -->
+    <div id="admin-dashboard" class="dashboard-container hidden">
+
+        <!-- HEADER DEL PANEL -->
+        <header class="admin-header">
+            <div class="header-brand">
+                <img src="img/logo/logo.png" alt="Logo Peretti" class="admin-logo-img">
+                <div>
+                    <h2>Administración PERETTI</h2>
+                    <span>Edición directa de precios, promos y delivery</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" target="_blank" class="btn-header-link">🌐 Ver Menú Público</a>
+                <button type="button" id="btn-logout" class="btn-header-logout">🔒 Salir</button>
+            </div>
+        </header>
+
+        <!-- PESTAÑAS DE NAVEGACIÓN -->
+        <nav class="admin-nav-tabs">
+            <button class="tab-btn active" data-tab="tab-platos">🍔 Platos y Precios</button>
+            <button class="tab-btn" data-tab="tab-extras">➕ Adicionales (Extras)</button>
+            <button class="tab-btn" data-tab="tab-negocio">⚙️ Datos y Delivery</button>
+            <button class="tab-btn" data-tab="tab-qr">📲 Código QR & Enlaces</button>
+        </nav>
+
+        <main class="admin-main">
+
+            <!-- TAB 1: PLATOS Y PRECIOS -->
+            <section id="tab-platos" class="tab-content active">
+                <div class="tab-header">
+                    <h3>Gestión de la Carta</h3>
+                    <p>Modificá precios, pausá ítems sin stock o destacá productos con insignia de promo ⭐.</p>
+                </div>
+                <div id="admin-products-list" class="admin-products-container">
+                    <!-- Se carga dinámicamente con admin.js -->
+                </div>
+            </section>
+
+            <!-- TAB 2: EXTRAS / ADICIONALES -->
+            <section id="tab-extras" class="tab-content">
+                <div class="tab-header">
+                    <h3>Adicionales / Extras para Platos</h3>
+                    <p>Configurá los precios de los agregados disponibles en sándwiches y hamburguesas.</p>
+                </div>
+                <div id="admin-extras-list" class="admin-extras-container">
+                    <!-- Se carga dinámicamente -->
+                </div>
+                <button type="button" id="btn-add-extra" class="btn-secondary-outline">+ Agregar Nuevo Adicional</button>
+            </section>
+
+            <!-- TAB 3: DATOS DEL NEGOCIO & LOGÍSTICA -->
+            <section id="tab-negocio" class="tab-content">
+                <div class="tab-header">
+                    <h3>Configuración de Negocio y Delivery</h3>
+                    <p>Ajustá costo de envío, horarios y datos de cobro sin tocar código.</p>
+                </div>
+
+                <div class="config-grid">
+                    <div class="form-card">
+                        <h4>🛵 Costo de Delivery</h4>
+                        <div class="input-wrapper">
+                            <span class="currency-symbol">$</span>
+                            <input type="number" id="cfg-delivery-fee" class="form-input" min="0" step="100">
+                        </div>
+                        <small>Impacta automáticamente en el cálculo de cada pedido.</small>
+                    </div>
+
+                    <div class="form-card">
+                        <h4>📱 WhatsApp de Pedidos</h4>
+                        <input type="text" id="cfg-phone" class="form-input" placeholder="Ej: 5491138530778">
+                        <small>Número con código de país (549) y sin guiones.</small>
+                    </div>
+
+                    <div class="form-card">
+                        <h4>💳 Alias de Transferencia</h4>
+                        <input type="text" id="cfg-alias" class="form-input" placeholder="Ej: peretti.mp">
+                        <small>Aparece en la web y en el resumen de WhatsApp.</small>
+                    </div>
+
+                    <div class="form-card">
+                        <h4>🕒 Días y Horarios</h4>
+                        <textarea id="cfg-schedules" class="form-input" rows="2"></textarea>
+                        <small>Ej: Lun a Jue 12:30 a 14:30 y 19 a 22 | Vie y Sáb 19 a 00 hs.</small>
+                    </div>
+
+                    <div class="form-card">
+                        <h4>📍 Zona de Cobertura</h4>
+                        <input type="text" id="cfg-coverage" class="form-input">
+                        <small>Barrios donde realizan entregas (ej: Chacarita, Colegiales).</small>
+                    </div>
+
+                    <div class="form-card">
+                        <h4>🔑 PIN de Acceso al Panel</h4>
+                        <input type="password" id="cfg-admin-pin" class="form-input" placeholder="Ej: 2026">
+                        <small>Podés cambiar tu clave numérica cuando quieras.</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: QR & WHATSAPP BUSINESS -->
+            <section id="tab-qr" class="tab-content">
+                <div class="tab-header">
+                    <h3>Código QR para Volantes y WhatsApp</h3>
+                    <p>Usá este QR para colocar en tus volantes impresos a color y en tu perfil de WhatsApp Business.</p>
+                </div>
+
+                <div class="qr-preview-box">
+                    <img src="img/qr_peretti.png" alt="Código QR Peretti" class="qr-big-img">
+                    <div class="qr-info">
+                        <h4>Tu Menú Digital en 1 solo enlace</h4>
+                        <p>Al escanear este código, los clientes van directo al menú digital con fotos y precios actualizados.</p>
+                        <div class="qr-url-box">
+                            <input type="text" id="qr-target-url" class="form-input" readonly value="https://sir8633.github.io/peretti/menu.html">
+                            <button type="button" id="btn-copy-qr-url" class="btn-secondary-outline">Copiar Link</button>
+                        </div>
+                        <a href="img/qr_peretti.png" download="QR_Peretti_Menu.png" class="btn-download-qr">📥 Descargar QR en Alta Definición</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- BARRA FLOTANTE DE GUARDAR CAMBIOS -->
+        <div class="admin-save-bar">
+            <div class="save-bar-info">
+                <span>¿Terminaste de hacer cambios?</span>
+            </div>
+            <div class="save-bar-buttons">
+                <button type="button" id="btn-reset-defaults" class="btn-reset">Restablecer Menú Original</button>
+                <button type="button" id="btn-save-changes" class="btn-save-all">💾 Guardar Todos los Cambios</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TOAST DE NOTIFICACIÓN -->
+    <div id="admin-toast" class="admin-toast">¡Cambios guardados con éxito!</div>
+
+    <script src="js/menu-data.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

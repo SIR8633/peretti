@@ -1,0 +1,414 @@
+/* =========================================================
+   PERETTI - CARTA GASTRONÓMICA / MENÚ DIGITAL (menu.css)
+   Estética de Pizarra Restaurante / Chalkboard Gourmet
+   ========================================================= */
+
+:root {
+    --bg-dark: #0f171d;
+    --bg-card: #15222b;
+    --bg-card-hover: #1c2e3a;
+    --bg-wood: #261710;
+    --primary-amber: #f59e0b;
+    --primary-amber-glow: rgba(245, 158, 11, 0.3);
+    --accent-red: #ef4444;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --wsp-green: #25d366;
+    --wsp-hover: #1ebd5a;
+    --font-heading: 'Cabinet Grotesk', 'Impact', 'Arial Black', sans-serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    background-image: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.08) 0%, transparent 60%);
+    min-height: 100vh;
+    padding-bottom: 90px;
+}
+
+/* Encabezado Principal */
+.menu-header {
+    background: linear-gradient(180deg, rgba(15, 23, 29, 0.98) 0%, rgba(15, 23, 29, 0.92) 100%);
+    border-bottom: 2px solid rgba(245, 158, 11, 0.25);
+    padding: 24px 16px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #000;
+    border: 3px solid var(--primary-amber);
+    box-shadow: 0 0 24px var(--primary-amber-glow);
+    margin-bottom: 12px;
+}
+
+.brand-badge img {
+    width: 82px;
+    height: 82px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.brand-slogan {
+    font-size: 0.95rem;
+    color: var(--primary-amber);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+/* Píldoras de información */
+.info-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.info-pill {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    color: var(--text-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.info-pill.highlight {
+    background: rgba(245, 158, 11, 0.15);
+    border-color: var(--primary-amber);
+    color: #fef08a;
+    font-weight: 600;
+}
+
+/* Barra de acciones destacadas */
+.action-buttons-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-menu-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-wsp-main {
+    background-color: var(--wsp-green);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-wsp-main:hover {
+    background-color: var(--wsp-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--primary-amber);
+    border: 1.5px solid var(--primary-amber);
+}
+
+.btn-outline-gold:hover {
+    background: rgba(245, 158, 11, 0.15);
+}
+
+.btn-outline-cart {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline-cart:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+/* Contenedor de Categorías */
+.menu-container {
+    max-width: 1080px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+.menu-category-section {
+    margin-bottom: 38px;
+}
+
+.menu-category-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+    padding-bottom: 8px;
+}
+
+.menu-category-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--primary-amber);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.menu-category-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.5) 0%, transparent 100%);
+}
+
+/* Grilla de Platos */
+.menu-dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 18px;
+}
+
+.dish-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.dish-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(245, 158, 11, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.dish-media {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    background: #0a1116;
+}
+
+.dish-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-media img {
+    transform: scale(1.04);
+}
+
+.dish-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.dish-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.dish-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.dish-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.dish-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dish-price {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: #fef08a;
+    letter-spacing: 0.5px;
+}
+
+.btn-dish-order {
+    background: rgba(37, 211, 102, 0.15);
+    color: var(--wsp-green);
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-dish-order:hover {
+    background: var(--wsp-green);
+    color: #fff;
+}
+
+/* Barra Flotante para Móvil */
+.sticky-mobile-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 29, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+
+.sticky-mobile-bar .btn-sticky {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Footer Institucional */
+.menu-footer {
+    text-align: center;
+    padding: 30px 16px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-footer a {
+    color: var(--primary-amber);
+    text-decoration: none;
+}
+
+/* Adaptación para Impresión / Guardar en PDF */
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        padding-bottom: 0 !important;
+    }
+    .action-buttons-bar, .sticky-mobile-bar, .btn-dish-order {
+        display: none !important;
+    }
+    .menu-header {
+        background: none !important;
+        border-bottom: 2px solid #000 !important;
+    }
+    .brand-title {
+        color: #000 !important;
+    }
+    .dish-card {
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        break-inside: avoid;
+    }
+    .dish-title {
+        color: #000 !important;
+    }
+    .dish-desc {
+        color: #444 !important;
+    }
+    .dish-price {
+        color: #000 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .brand-title {
+        font-size: 1.9rem;
+    }
+    .brand-badge {
+        width: 76px;
+        height: 76px;
+    }
+    .brand-badge img {
+        width: 68px;
+        height: 68px;
+    }
+    .menu-dishes-grid {
+        grid-template-columns: 1fr;
+    }
+}
