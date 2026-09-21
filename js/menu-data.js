@@ -114,7 +114,7 @@ const defaultMenuData = {
             nombre: "Milanesa Especial Peretti c/ Fritas Cheddar",
             descripcion: "Nuestra creación especial: milanesa gigante napolitana al horno con salsa especial, mozzarella gratinada, jamón cocido, rodajas de tomate y huevos fritos, servida sobre colchón de papas fritas con salsa cheddar.",
             precio: 22000,
-            img: "img/menu/milapizza.jpg",
+            img: "img/menu/milanesa_peretti.jpg",
             badge: "Especial de la Casa 👑",
             disponible: true,
             permiteExtras: true
@@ -124,7 +124,7 @@ const defaultMenuData = {
             nombre: "Milanesa a Caballo c/ Fritas",
             descripcion: "Milanesa gigante napolitana con salsa casera de tomate, abundante mozzarella gratinada y 2 huevos fritos a caballo + papas fritas doradas.",
             precio: 20000,
-            img: "img/menu/milapizza.jpg",
+            img: "img/menu/milanesa_caballo.jpg",
             badge: "Para Compartir",
             disponible: true,
             permiteExtras: true
