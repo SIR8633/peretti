@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital & Carta Oficial | PERETTI Delivery</title>
+    <meta name="description" content="Carta digital y menú oficial de PERETTI. Sándwiches gigantes, hamburguesas caseras, milanesas con papas fritas y pizzas. Delivery en Chacarita.">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="PERETTI - Menú Digital & Carta Oficial">
+    <meta property="og:description" content="Sándwiches, Hamburguesas caseras, Milanesas y Pizzas al molde. ¡Pedí online por WhatsApp!">
+    <meta property="og:image" content="img/logo/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/menu.css?v=20261001_v2">
+</head>
+<body>
+
+    <!-- Encabezado de la Carta -->
+    <header class="menu-header">
+        <div class="brand-badge">
+            <img src="img/logo/logo.png" alt="Logo Peretti">
+        </div>
+        <h1 class="brand-title" id="menu-brand-name">PERETTI</h1>
+        <p class="brand-slogan" id="menu-brand-slogan">SÁNDWICHES, HAMBURGUESAS & MINUTAS</p>
+
+        <!-- Información de atención y delivery -->
+        <div class="info-pills-row">
+            <span class="info-pill highlight" id="pill-delivery">🛵 Envío: $1.000</span>
+            <span class="info-pill" id="pill-hours">🕒 Lun a Jue: 12:30 a 14:30 y 19 a 22hs | Vie y Sáb: 19 a 00hs</span>
+            <span class="info-pill" id="pill-coverage">📍 Chacarita y alrededores</span>
+            <span class="info-pill" id="pill-alias">💳 Alias: peretti.mp</span>
+        </div>
+
+        <!-- Botones de Acción Directa -->
+        <div class="action-buttons-bar">
+            <a href="https://wa.me/5491138530778?text=%C2%A1Hola%20Peretti!%20Quiero%20hacer%20un%20pedido." target="_blank" class="btn-menu-action btn-wsp-main" id="btn-wsp-header">
+                💬 Pedir por WhatsApp
+            </a>
+            <a href="Volante_1_por_hoja_con_QR.pdf" target="_blank" class="btn-menu-action btn-outline-gold" id="btn-download-pdf">
+                📄 Ver Carta en PDF
+            </a>
+            <a href="index.html" class="btn-menu-action btn-outline-cart">
+                🛒 Armar Pedido en Carrito
+            </a>
+        </div>
+    </header>
+
+    <!-- Barra de Categorías Fijas (Sticky Pills) -->
+    <nav class="sticky-category-bar" id="sticky-category-bar" aria-label="Categorías del menú">
+        <div class="category-pills-scroll" id="category-pills-container">
+            <!-- Generado dinámicamente -->
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal de la Carta (Acordeones) -->
+    <main class="menu-container" id="digital-menu-container">
+        <!-- Generado dinámicamente desde JavaScript -->
+    </main>
+
+    <!-- Barra Flotante para Móviles -->
+    <div class="sticky-mobile-bar">
+        <a href="https://wa.me/5491138530778?text=%C2%A1Hola%20Peretti!%20Quiero%20hacer%20un%20pedido." target="_blank" class="btn-sticky btn-wsp-main" id="sticky-wsp-btn">
+            💬 Pedir por WhatsApp
+        </a>
+        <a href="index.html" class="btn-sticky btn-outline-cart">
+            🛒 Carrito & Extras
+        </a>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="menu-footer">
+        <p><strong>PERETTI</strong> • Sándwiches, Hamburguesas & Minutas</p>
+        <p>Solo Delivery • Chacarita, CABA</p>
+        <p style="margin-top: 8px; font-size: 0.78rem;">
+            <a href="admin.html">Acceso Administrador</a> • Precios válidos desde Octubre 2026
+        </p>
+    </footer>
+
+    <!-- Scripts de Datos y Renderizado -->
+    <script src="js/menu-data.js?v=20261001_v2"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const config = getActiveBusinessConfig();
+            const menuData = getActiveMenuData();
+            const extrasData = getActiveExtras();
+
+            // Actualizar textos del negocio
+            document.getElementById("menu-brand-name").textContent = config.nombreNegocio || "PERETTI";
+            document.getElementById("menu-brand-slogan").textContent = config.slogan || "SÁNDWICHES, HAMBURGUESAS & MINUTAS";
+            document.getElementById("pill-delivery").textContent = `🛵 Envío: $${(config.costoEnvio || 1000).toLocaleString("es-AR")}`;
+            document.getElementById("pill-hours").textContent = `🕒 ${config.horarios || "Lun a Jue: 12:30 a 14:30 y 19 a 22hs | Vie y Sáb: 19 a 00hs"}`;
+            document.getElementById("pill-coverage").textContent = `📍 ${config.zonaCobertura || "Chacarita y alrededores"}`;
+            document.getElementById("pill-alias").textContent = `💳 Alias: ${config.aliasTransferencia || "peretti.mp"}`;
+
+            const phoneClean = (config.telefonoWhatsApp || "5491138530778").replace(/[^0-9]/g, "");
+            const baseWspUrl = `https://wa.me/${phoneClean}?text=`;
+
+            document.getElementById("btn-wsp-header").href = `${baseWspUrl}${encodeURIComponent("¡Hola Peretti! Quiero hacer un pedido.")}`;
+            document.getElementById("sticky-wsp-btn").href = `${baseWspUrl}${encodeURIComponent("¡Hola Peretti! Quiero hacer un pedido.")}`;
+
+            // Contenedores
+            const container = document.getElementById("digital-menu-container");
+            const pillsContainer = document.getElementById("category-pills-container");
+            container.innerHTML = "";
+            pillsContainer.innerHTML = "";
+
+            let categoryIndex = 0;
+
+            for (const [categoria, productos] of Object.entries(menuData)) {
+                const productosVisibles = productos.filter(p => p.disponible !== false);
+                if (productosVisibles.length === 0) continue;
+
+                const catSlug = `cat-${categoryIndex}`;
+                const isOpenDefault = (categoryIndex === 0);
+
+                // 1. Crear botón de categoría en la barra pegajosa (Sticky Pill)
+                const pill = document.createElement("button");
+                pill.type = "button";
+                pill.className = `category-pill ${isOpenDefault ? 'active' : ''}`;
+                pill.textContent = categoria;
+                pill.dataset.target = catSlug;
+                pill.addEventListener("click", () => {
+                    handlePillClick(catSlug, pill);
+                });
+                pillsContainer.appendChild(pill);
+
+                // 2. Crear sección Acordeón
+                const section = document.createElement("section");
+                section.className = `accordion-section ${isOpenDefault ? 'is-open' : ''}`;
+                section.id = catSlug;
+
+                // Cabecera interactiva del acordeón
+                const header = document.createElement("button");
+                header.type = "button";
+                header.className = "accordion-header";
+                header.setAttribute("aria-expanded", isOpenDefault ? "true" : "false");
+                header.innerHTML = `
+                    <div class="accordion-header-left">
+                        <h2 class="menu-category-title">${categoria}</h2>
+                        <span class="accordion-count-badge">${productosVisibles.length} ${productosVisibles.length === 1 ? 'plato' : 'platos'}</span>
+                    </div>
+                    <div class="accordion-header-right">
+                        <span class="accordion-toggle-hint">${isOpenDefault ? 'Cerrar' : 'Ver platos'}</span>
+                        <svg class="accordion-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                `;
+
+                // Contenido colapsable
+                const content = document.createElement("div");
+                content.className = "accordion-content";
+
+                const inner = document.createElement("div");
+                inner.className = "accordion-inner";
+
+                const grid = document.createElement("div");
+                grid.className = "menu-dishes-grid";
+
+                productosVisibles.forEach(prod => {
+                    const card = document.createElement("article");
+                    card.className = "dish-card";
+
+                    const wspMessage = encodeURIComponent(`¡Hola Peretti! Quiero pedir: ${prod.nombre} ($${prod.precio.toLocaleString("es-AR")}). ¿Me confirman demora y datos para pagar? 🙌`);
+                    const directOrderUrl = `${baseWspUrl}${wspMessage}`;
+
+                    card.innerHTML = `
+                        <div class="dish-media">
+                            <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" onerror="this.src='img/menu/papas.jpg'">
+                            ${prod.badge ? `<span class="dish-badge">${prod.badge}</span>` : ''}
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-title">${prod.nombre}</h3>
+                            <p class="dish-desc">${prod.descripcion || ''}</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$ ${prod.precio.toLocaleString("es-AR")}</span>
+                                <a href="${directOrderUrl}" target="_blank" class="btn-dish-order">
+                                    💬 Pedir
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                inner.appendChild(grid);
+                content.appendChild(inner);
+
+                // Alternar acordeón al hacer clic en el encabezado
+                header.addEventListener("click", () => {
+                    const currentlyOpen = section.classList.contains("is-open");
+                    if (currentlyOpen) {
+                        section.classList.remove("is-open");
+                        header.setAttribute("aria-expanded", "false");
+                        header.querySelector(".accordion-toggle-hint").textContent = "Ver platos";
+                    } else {
+                        section.classList.add("is-open");
+                        header.setAttribute("aria-expanded", "true");
+                        header.querySelector(".accordion-toggle-hint").textContent = "Cerrar";
+                    }
+                });
+
+                section.appendChild(header);
+                section.appendChild(content);
+                container.appendChild(section);
+
+                categoryIndex++;
+            }
+
+            // Sección de Adicionales / Extras
+            if (extrasData && extrasData.length > 0) {
+                const extrasSlug = `cat-extras`;
+                const pillExtras = document.createElement("button");
+                pillExtras.type = "button";
+                pillExtras.className = "category-pill";
+                pillExtras.textContent = "Extras & Adicionales";
+                pillExtras.dataset.target = extrasSlug;
+                pillExtras.addEventListener("click", () => {
+                    handlePillClick(extrasSlug, pillExtras);
+                });
+                pillsContainer.appendChild(pillExtras);
+
+                const extrasSection = document.createElement("section");
+                extrasSection.className = "accordion-section";
+                extrasSection.id = extrasSlug;
+
+                const extrasHeader = document.createElement("button");
+                extrasHeader.type = "button";
+                extrasHeader.className = "accordion-header";
+                extrasHeader.setAttribute("aria-expanded", "false");
+                extrasHeader.innerHTML = `
+                    <div class="accordion-header-left">
+                        <h2 class="menu-category-title">Adicionales / Extras</h2>
+                        <span class="accordion-count-badge">${extrasData.length} opciones</span>
+                    </div>
+                    <div class="accordion-header-right">
+                        <span class="accordion-toggle-hint">Ver opciones</span>
+                        <svg class="accordion-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                `;
+
+                const extrasContent = document.createElement("div");
+                extrasContent.className = "accordion-content";
+
+                const extrasInner = document.createElement("div");
+                extrasInner.className = "accordion-inner";
+
+                const extrasGrid = document.createElement("div");
+                extrasGrid.className = "menu-dishes-grid";
+                extrasGrid.style.gridTemplateColumns = "repeat(auto-fill, minmax(220px, 1fr))";
+
+                extrasData.forEach(ext => {
+                    const card = document.createElement("div");
+                    card.className = "dish-card";
+                    card.style.cssText = "padding: 14px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;";
+                    card.innerHTML = `
+                        <div>
+                            <h4 style="font-size: 1rem; color: #fff;">+ ${ext.nombre}</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Para sumar a tu plato</span>
+                        </div>
+                        <span style="font-family: var(--font-heading); font-size: 1.15rem; color: #fef08a; font-weight: 800;">
+                            $ ${ext.precio.toLocaleString("es-AR")}
+                        </span>
+                    `;
+                    extrasGrid.appendChild(card);
+                });
+
+                extrasInner.appendChild(extrasGrid);
+                extrasContent.appendChild(extrasInner);
+
+                extrasHeader.addEventListener("click", () => {
+                    const currentlyOpen = extrasSection.classList.contains("is-open");
+                    if (currentlyOpen) {
+                        extrasSection.classList.remove("is-open");
+                        extrasHeader.setAttribute("aria-expanded", "false");
+                        extrasHeader.querySelector(".accordion-toggle-hint").textContent = "Ver opciones";
+                    } else {
+                        extrasSection.classList.add("is-open");
+                        extrasHeader.setAttribute("aria-expanded", "true");
+                        extrasHeader.querySelector(".accordion-toggle-hint").textContent = "Cerrar";
+                    }
+                });
+
+                extrasSection.appendChild(extrasHeader);
+                extrasSection.appendChild(extrasContent);
+                container.appendChild(extrasSection);
+            }
+
+            // Manejador de clics en las pills superiores
+            function handlePillClick(targetId, pillElement) {
+                // Actualizar estado activo en pills
+                document.querySelectorAll(".category-pill").forEach(p => p.classList.remove("active"));
+                pillElement.classList.add("active");
+
+                // Centrar la pill en la barra horizontal
+                pillElement.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+
+                // Abrir la sección correspondiente
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    if (!targetSection.classList.contains("is-open")) {
+                        targetSection.classList.add("is-open");
+                        const h = targetSection.querySelector(".accordion-header");
+                        if (h) {
+                            h.setAttribute("aria-expanded", "true");
+                            const hint = h.querySelector(".accordion-toggle-hint");
+                            if (hint) hint.textContent = "Cerrar";
+                        }
+                    }
+
+                    // Scroll suave hasta la sección (descontando la altura de la barra pegajosa)
+                    const stickyBar = document.getElementById("sticky-category-bar");
+                    const offset = stickyBar ? stickyBar.offsetHeight + 12 : 70;
+                    const topPos = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: topPos, behavior: "smooth" });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
