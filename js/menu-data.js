@@ -80,7 +80,7 @@ const defaultMenuData = {
             nombre: "Hamburguesa Simple c/ Fritas",
             descripcion: "Medallón de carne con lechuga fresca y rodajas de tomate en pan suave artesanal. ¡Incluye papas fritas!",
             precio: 8000,
-            img: "img/menu/hamb_completa.jpg",
+            img: "img/menu/hamburguesa_simple.jpg",
             badge: "",
             disponible: true,
             permiteExtras: true
