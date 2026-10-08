@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERETTI | Sándwiches, Hamburguesas & Minutas - Chacarita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20261008_v1">
+    <link rel="icon" type="image/png" href="img/logo/logo.png">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo-brand">
+                <img src="img/logo/logo.png" alt="Logo Peretti" class="brand-logo-img">
+                <div class="brand-text">
+                    <h1>PERETTI</h1>
+                    <span>SÁNDWICHES & MINUTAS</span>
+                </div>
+            </a>
+            <div class="nav-badges">
+                <div class="badge-pill">
+                    <span>📍</span> Chacarita (CABA)
+                </div>
+                <div class="badge-pill" id="nav-alias">
+                    <span>💳</span> Alias: peretti.mp
+                </div>
+                <div class="badge-pill highlight badge-delivery-cost">
+                    <span>🛵</span> Envío: $1.000
+                </div>
+                <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="badge-pill badge-facebook">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Facebook
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO BANNER COMPACTO & APETITOSO -->
+        <section class="hero">
+            <div class="hero-banner">
+                <div class="hero-info">
+                    <h2>Minutas caseras, sándwiches gigantes y hamburguesas en <span>Chacarita</span></h2>
+                    <p class="hero-lead">Porciones abundantes y sabor de barrio directo a tu casa.</p>
+                    <div class="hero-badges">
+                        <span class="hero-badge-item">🛵 Delivery en Chacarita y alrededores</span>
+                        <span class="hero-badge-item" id="hero-schedule">🕒 Lun a Jue: 12:30 a 14:30 y 19 a 22 hs | Vie y Sáb: 19 a 00 hs</span>
+                        <span class="hero-badge-item">💳 Alias: <strong>peretti.mp</strong></span>
+                        <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="hero-badge-item hero-badge-fb">
+                            👍 Facebook Oficial
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CINTA DINÁMICA: CÓMO PEDIR EN 3 PASOS SIMPLES -->
+            <div class="quick-order-steps">
+                <div class="step-pill">
+                    <span class="step-num">1</span>
+                    <span class="step-text">Elegí lo que te tiente 🍔</span>
+                </div>
+                <span class="step-arrow">➔</span>
+                <div class="step-pill">
+                    <span class="step-num">2</span>
+                    <span class="step-text">Revisá tu pedido 🛒</span>
+                </div>
+                <span class="step-arrow">➔</span>
+                <div class="step-pill">
+                    <span class="step-num">3</span>
+                    <span class="step-text">Confirmás en WhatsApp 💬</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE REELS EN ACCIÓN -->
+        <section class="reels-section" aria-label="Nuestros Platos en Acción">
+            <div class="reels-header">
+                <div class="reels-title-wrap">
+                    <span class="reels-icon-badge">🎬</span>
+                    <div>
+                        <h2 class="reels-title">Nuestros Platos en Acción</h2>
+                        <p class="reels-subtitle">Mirá cómo salen del fuego nuestras especialidades</p>
+                    </div>
+                </div>
+                <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="reels-fb-link">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Seguinos en Facebook ↗
+                </a>
+            </div>
+            <div class="reels-carousel">
+                <!-- Reel 1 -->
+                <div class="reel-card" data-video-id="cart-reel-vid-1">
+                    <div class="reel-video-wrapper">
+                        <video id="cart-reel-vid-1" class="reel-video" loop muted playsinline preload="metadata">
+                            <source src="img/gemini_generated_video_d96e06a0.mp4" type="video/mp4">
+                        </video>
+                        <div class="reel-badge-top">🔥 Especial Peretti</div>
+                        <button type="button" class="reel-sound-btn" aria-label="Activar sonido" title="Activar/Silenciar sonido">
+                            <span class="sound-icon">🔇</span>
+                        </button>
+                        <div class="reel-play-indicator">▶</div>
+                        <div class="reel-overlay-bottom">
+                            <div class="reel-dish-info">
+                                <h3 class="reel-dish-name">Hamburguesa Doble & Cheddar</h3>
+                                <p class="reel-dish-desc">Carne jugosa y cheddar fundido a la plancha</p>
+                            </div>
+                            <div class="reel-actions-row">
+                                <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="btn-reel-fb">
+                                    👍 Facebook
+                                </a>
+                                <a href="#menu" class="btn-reel-wsp" onclick="handleProductClick('burger_doble')">
+                                    🛒 Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reel 2 -->
+                <div class="reel-card" data-video-id="cart-reel-vid-2">
+                    <div class="reel-video-wrapper">
+                        <video id="cart-reel-vid-2" class="reel-video" loop muted playsinline preload="metadata">
+                            <source src="img/gemini_generated_video_ff02b691.mp4" type="video/mp4">
+                        </video>
+                        <div class="reel-badge-top">🍔 Recién Salido</div>
+                        <button type="button" class="reel-sound-btn" aria-label="Activar sonido" title="Activar/Silenciar sonido">
+                            <span class="sound-icon">🔇</span>
+                        </button>
+                        <div class="reel-play-indicator">▶</div>
+                        <div class="reel-overlay-bottom">
+                            <div class="reel-dish-info">
+                                <h3 class="reel-dish-name">Sándwiches & Minutas Peretti</h3>
+                                <p class="reel-dish-desc">Ingredientes frescos y porciones gigantes</p>
+                            </div>
+                            <div class="reel-actions-row">
+                                <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="btn-reel-fb">
+                                    👍 Facebook
+                                </a>
+                                <a href="#menu" class="btn-reel-wsp" onclick="handleProductClick('combo_mila_carne')">
+                                    🛒 Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE MENÚ -->
+        <section id="menu" class="menu-section">
+            <div class="section-header">
+                <h2>Nuestra Carta</h2>
+                <p>Elegí tus platos favoritos y personalizalos con adicionales</p>
+            </div>
+
+            <!-- Barra de Categorías Fijas (Sticky Pills) -->
+            <nav class="sticky-category-bar" id="sticky-category-bar" aria-label="Categorías del menú">
+                <div class="category-pills-scroll" id="category-pills-container">
+                    <!-- Generado dinámicamente -->
+                </div>
+            </nav>
+
+            <div id="menu-container">
+                <!-- Generado dinámicamente por js/script.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DE ADICIONALES / EXTRAS -->
+    <div id="extras-modal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div>
+                    <h3 id="modal-product-name">Personalizá tu plato</h3>
+                    <span id="modal-base-price" class="modal-base-price">$0</span>
+                </div>
+                <button type="button" id="modal-close-btn" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="extras-subtitle">¿Querés sumarle algún adicional?</p>
+                <div id="modal-extras-list" class="extras-list">
+                    <!-- Checkboxes generados dinámicamente -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="modal-confirm-btn" class="btn-confirm-extras">
+                    Agregar al Pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BARRA FLOTANTE DE CARRITO INTELIGENTE (STICKY BOTTOM BAR) -->
+    <div id="sticky-cart-bar" class="sticky-cart-bar hidden" onclick="openCartDrawer()">
+        <div class="cart-bar-inner">
+            <div class="cart-bar-badge">
+                <span class="cart-icon">🛒</span>
+                <span id="cart-bar-count" class="cart-badge-count">0</span>
+            </div>
+            <div class="cart-bar-info">
+                <span class="cart-bar-title">Ver mi Pedido</span>
+                <span id="cart-bar-total" class="cart-bar-total">$0</span>
+            </div>
+            <div class="btn-cart-bar-action">
+                <span>Continuar</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- DRAWER / BOTTOM SHEET DE CHECKOUT -->
+    <div id="cart-drawer-backdrop" class="cart-drawer-backdrop hidden" onclick="closeCartDrawer(event)">
+        <div class="cart-drawer" id="cart-drawer" onclick="event.stopPropagation()">
+            <!-- Tirador visual para móviles -->
+            <div class="drawer-handle" onclick="closeCartDrawer()"></div>
+
+            <!-- Encabezado del Drawer -->
+            <div class="drawer-header">
+                <div class="drawer-header-left">
+                    <span class="drawer-title-icon">🛒</span>
+                    <div>
+                        <h3 class="drawer-title">Tu Pedido</h3>
+                        <span id="drawer-item-count" class="drawer-subtitle">0 ítems seleccionados</span>
+                    </div>
+                </div>
+                <button type="button" class="drawer-close-btn" onclick="closeCartDrawer()" aria-label="Cerrar pedido">&times;</button>
+            </div>
+
+            <!-- Cuerpo Scrolleable del Drawer -->
+            <div class="drawer-body">
+                <!-- Lista de productos -->
+                <div class="drawer-section">
+                    <div class="drawer-section-header">
+                        <span class="drawer-section-label">Platos en tu carrito:</span>
+                        <button type="button" class="btn-add-more" onclick="closeCartDrawer()">+ Agregar más</button>
+                    </div>
+                    <ul id="cart-items" class="drawer-cart-list">
+                        <li id="empty-cart-msg">Tu carrito está vacío. ¡Elegí lo que más te guste del menú!</li>
+                    </ul>
+                </div>
+
+                <!-- Desglose de totales -->
+                <div class="drawer-section drawer-pricing-box">
+                    <div class="drawer-price-row">
+                        <span>Subtotal de productos:</span>
+                        <span id="cart-subtotal">$0</span>
+                    </div>
+                    <div class="drawer-price-row">
+                        <span>Costo de envío (Chacarita y alrededores):</span>
+                        <span id="cart-delivery">$1.000</span>
+                    </div>
+                    <div class="drawer-price-row drawer-total-row">
+                        <span>Total Final a Abonar:</span>
+                        <span id="cart-total" class="drawer-total-amount">$0</span>
+                    </div>
+                </div>
+
+                <!-- Formulario de Entrega Rápido -->
+                <div class="drawer-section drawer-form-section">
+                    <h4 class="drawer-form-title">🛵 Datos para el Delivery</h4>
+
+                    <div class="drawer-field">
+                        <label for="nombre">Tu Nombre *</label>
+                        <input type="text" id="nombre" class="drawer-input" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="drawer-field">
+                        <label for="direccion">Dirección exacta (calle, altura, piso/depto) *</label>
+                        <input type="text" id="direccion" class="drawer-input" placeholder="Ej: Bonpland 1234, 3° B" required>
+                        <span class="input-hint-compact">Repartimos en Chacarita, Colegiales, Villa Crespo y Palermo Hollywood.</span>
+                    </div>
+
+                    <!-- Forma de Pago -->
+                    <div class="drawer-field">
+                        <label>Forma de Pago *</label>
+                        <div class="drawer-payment-grid">
+                            <label class="payment-card">
+                                <input type="radio" name="forma_pago" value="transferencia" checked>
+                                <div class="payment-card-body">
+                                    <strong>📱 Transferencia</strong>
+                                    <small>Alias: peretti.mp</small>
+                                </div>
+                            </label>
+                            <label class="payment-card">
+                                <input type="radio" name="forma_pago" value="efectivo">
+                                <div class="payment-card-body">
+                                    <strong>💵 Efectivo</strong>
+                                    <small>Al recibir tu pedido</small>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Opciones de Efectivo Dinámicas -->
+                    <div id="cash-options-container" class="cash-box-compact hidden">
+                        <label for="monto_abona">¿Con cuánto vas a pagar? (para que el repartidor lleve tu cambio)</label>
+                        <div class="cash-input-group">
+                            <input type="number" id="monto_abona" class="drawer-input" placeholder="Ej: 20000" min="0" step="500">
+                            <button type="button" id="btn-pago-justo" class="btn-pago-justo">Pago Justo</button>
+                        </div>
+                        <div id="cash-change-feedback" class="cash-feedback-text"></div>
+                    </div>
+
+                    <div class="drawer-field">
+                        <label for="aclaraciones">Aclaraciones o preferencias (opcional)</label>
+                        <input type="text" id="aclaraciones" class="drawer-input" placeholder="Ej: Sin cebolla, tocar timbre 3B...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Fijo del Drawer con Botón WhatsApp -->
+            <div class="drawer-footer">
+                <button type="button" id="whatsapp-button" class="btn-drawer-whatsapp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Pedir por WhatsApp</span>
+                    <span id="btn-drawer-total" class="drawer-btn-price">$0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <img src="img/logo/logo.png" alt="Logo Peretti" class="footer-logo">
+            <p><strong>PERETTI</strong> &copy; 2026 - Sándwiches & Minutas Caseras</p>
+            <p>Chacarita, Ciudad Autónoma de Buenos Aires.</p>
+            <p class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Seguinos en Facebook @peretti
+                </a>
+            </p>
+            <p class="footer-contact">
+                WhatsApp: <a href="https://wa.me/5491138530778" target="_blank" rel="noopener">+54 9 11 3853-0778</a> | Alias: <strong>peretti.mp</strong>
+            </p>
+            <p class="footer-admin">
+                <a href="menu.html" class="admin-link">📖 Ver Carta Digital QR</a> &nbsp;|&nbsp;
+                <a href="admin.html" class="admin-link">⚙️ Acceso Administrador</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/menu-data.js?v=20261008_v1"></script>
+    <script src="js/script.js?v=20261008_v1"></script>
+</body>
+
+</html>

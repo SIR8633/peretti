@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Digital & Carta Oficial | PERETTI Delivery</title>
+    <meta name="description" content="Carta digital y menú oficial de PERETTI. Sándwiches gigantes, hamburguesas caseras, milanesas con papas fritas y pizzas. Delivery en Chacarita.">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="PERETTI - Menú Digital & Carta Oficial">
+    <meta property="og:description" content="Sándwiches, Hamburguesas caseras, Milanesas y Pizzas al molde. ¡Pedí online por WhatsApp!">
+    <meta property="og:image" content="img/logo/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/menu.css?v=20261008_v1">
+</head>
+<body>
+
+    <!-- Encabezado de la Carta -->
+    <header class="menu-header">
+        <div class="brand-badge">
+            <img src="img/logo/logo.png" alt="Logo Peretti">
+        </div>
+        <h1 class="brand-title" id="menu-brand-name">PERETTI</h1>
+        <p class="brand-slogan" id="menu-brand-slogan">SÁNDWICHES, HAMBURGUESAS & MINUTAS</p>
+
+        <!-- Información de atención y delivery -->
+        <div class="info-pills-row">
+            <span class="info-pill highlight" id="pill-delivery">🛵 Envío: $1.000</span>
+            <span class="info-pill" id="pill-hours">🕒 Lun a Jue: 12:30 a 14:30 y 19 a 22hs | Vie y Sáb: 19 a 00hs</span>
+            <span class="info-pill" id="pill-coverage">📍 Chacarita y alrededores</span>
+            <span class="info-pill" id="pill-alias">💳 Alias: peretti.mp</span>
+        </div>
+
+        <!-- Botones de Acción Directa -->
+        <div class="action-buttons-bar">
+            <a href="https://wa.me/5491138530778?text=%C2%A1Hola%20Peretti!%20Quiero%20hacer%20un%20pedido." target="_blank" class="btn-menu-action btn-wsp-main" id="btn-wsp-header">
+                💬 Pedir por WhatsApp
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="btn-menu-action btn-facebook" id="btn-fb-header">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+            <a href="Volante_1_por_hoja_con_QR.pdf" target="_blank" class="btn-menu-action btn-outline-gold" id="btn-download-pdf">
+                📄 Ver Carta en PDF
+            </a>
+            <a href="index.html" class="btn-menu-action btn-outline-cart">
+                🛒 Armar Pedido en Carrito
+            </a>
+        </div>
+
+        <!-- Pasos rápidos para pedir sin vueltas -->
+        <div class="quick-order-steps">
+            <div class="step-pill">
+                <span class="step-num">1</span>
+                <span>Elegí tus platos</span>
+            </div>
+            <span class="step-arrow">➔</span>
+            <div class="step-pill">
+                <span class="step-num">2</span>
+                <span>Personalizá con extras</span>
+            </div>
+            <span class="step-arrow">➔</span>
+            <div class="step-pill">
+                <span class="step-num">3</span>
+                <span>Pedí directo por WhatsApp</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE REELS EN ACCIÓN -->
+    <section class="reels-section" aria-label="Nuestros Platos en Acción">
+        <div class="reels-header">
+            <div class="reels-title-wrap">
+                <span class="reels-icon-badge">🎬</span>
+                <div>
+                    <h2 class="reels-title">Nuestros Platos en Acción</h2>
+                    <p class="reels-subtitle">Mirá cómo salen del fuego nuestras especialidades</p>
+                </div>
+            </div>
+            <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="reels-fb-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Seguinos en Facebook ↗
+            </a>
+        </div>
+        <div class="reels-carousel">
+            <!-- Reel 1: Hamburguesas Peretti -->
+            <div class="reel-card" data-video-id="reel-vid-1">
+                <div class="reel-video-wrapper">
+                    <video id="reel-vid-1" class="reel-video" loop muted playsinline preload="metadata">
+                        <source src="img/gemini_generated_video_d96e06a0.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-badge-top">🔥 Especial Peretti</div>
+                    <button type="button" class="reel-sound-btn" aria-label="Activar sonido" title="Activar/Silenciar sonido">
+                        <span class="sound-icon">🔇</span>
+                    </button>
+                    <div class="reel-play-indicator">▶</div>
+                    <div class="reel-overlay-bottom">
+                        <div class="reel-dish-info">
+                            <h3 class="reel-dish-name">Hamburguesa Doble & Cheddar</h3>
+                            <p class="reel-dish-desc">Carne jugosa y cheddar fundido a la plancha</p>
+                        </div>
+                        <div class="reel-actions-row">
+                            <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="btn-reel-fb">
+                                👍 Facebook
+                            </a>
+                            <a href="index.html?add=burger_doble" class="btn-reel-wsp" title="Pedir Hamburguesa Doble en Carrito">
+                                🛒 Pedir
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reel 2: Sándwiches & Minutas -->
+            <div class="reel-card" data-video-id="reel-vid-2">
+                <div class="reel-video-wrapper">
+                    <video id="reel-vid-2" class="reel-video" loop muted playsinline preload="metadata">
+                        <source src="img/gemini_generated_video_ff02b691.mp4" type="video/mp4">
+                    </video>
+                    <div class="reel-badge-top">🍔 Recién Salido</div>
+                    <button type="button" class="reel-sound-btn" aria-label="Activar sonido" title="Activar/Silenciar sonido">
+                        <span class="sound-icon">🔇</span>
+                    </button>
+                    <div class="reel-play-indicator">▶</div>
+                    <div class="reel-overlay-bottom">
+                        <div class="reel-dish-info">
+                            <h3 class="reel-dish-name">Sándwiches & Minutas Peretti</h3>
+                            <p class="reel-dish-desc">Ingredientes frescos y porciones gigantes</p>
+                        </div>
+                        <div class="reel-actions-row">
+                            <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" class="btn-reel-fb">
+                                👍 Facebook
+                            </a>
+                            <a href="index.html?add=combo_mila_carne" class="btn-reel-wsp" title="Pedir Combo Mila Carne en Carrito">
+                                🛒 Pedir
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra de Categorías Fijas (Sticky Pills) -->
+    <nav class="sticky-category-bar" id="sticky-category-bar" aria-label="Categorías del menú">
+        <div class="category-pills-scroll" id="category-pills-container">
+            <!-- Generado dinámicamente -->
+        </div>
+    </nav>
+
+    <!-- Contenedor Principal de la Carta (Acordeones) -->
+    <main class="menu-container" id="digital-menu-container">
+        <!-- Generado dinámicamente desde JavaScript -->
+    </main>
+
+    <!-- Barra Flotante para Móviles -->
+    <div class="sticky-mobile-bar">
+        <a href="index.html" class="btn-sticky btn-sticky-cart">
+            🛒 Armar Pedido en Carrito ➔
+        </a>
+        <a href="https://wa.me/5491138530778?text=%C2%A1Hola%20Peretti!%20Quiero%20hacer%20un%20pedido." target="_blank" class="btn-sticky btn-sticky-wsp" id="sticky-wsp-btn">
+            💬 WhatsApp
+        </a>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer class="menu-footer">
+        <p><strong>PERETTI</strong> • Sándwiches, Hamburguesas & Minutas</p>
+        <p>Solo Delivery • Chacarita, CABA</p>
+        <p style="margin-top: 10px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; align-items: center;">
+            <a href="https://www.facebook.com/profile.php?id=61594187432744" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook Oficial
+            </a>
+            <span style="color: rgba(255,255,255,0.2);">•</span>
+            <a href="https://wa.me/5491138530778" target="_blank" rel="noopener noreferrer" style="color: var(--wsp-green); font-weight: 700;">
+                WhatsApp: 11 3853-0778
+            </a>
+            <span style="color: rgba(255,255,255,0.2);">•</span>
+            <a href="admin.html">Acceso Administrador</a>
+        </p>
+        <p style="margin-top: 6px; font-size: 0.78rem;">Precios válidos desde Octubre 2026</p>
+    </footer>
+
+    <!-- Scripts de Datos y Renderizado -->
+    <script src="js/menu-data.js?v=20261008_v1"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const config = getActiveBusinessConfig();
+            const menuData = getActiveMenuData();
+            const extrasData = getActiveExtras();
+
+            // Actualizar textos del negocio
+            document.getElementById("menu-brand-name").textContent = config.nombreNegocio || "PERETTI";
+            document.getElementById("menu-brand-slogan").textContent = config.slogan || "SÁNDWICHES, HAMBURGUESAS & MINUTAS";
+            document.getElementById("pill-delivery").textContent = `🛵 Envío: $${(config.costoEnvio || 1000).toLocaleString("es-AR")}`;
+            document.getElementById("pill-hours").textContent = `🕒 ${config.horarios || "Lun a Jue: 12:30 a 14:30 y 19 a 22hs | Vie y Sáb: 19 a 00hs"}`;
+            document.getElementById("pill-coverage").textContent = `📍 ${config.zonaCobertura || "Chacarita y alrededores"}`;
+            document.getElementById("pill-alias").textContent = `💳 Alias: ${config.aliasTransferencia || "peretti.mp"}`;
+
+            const phoneClean = (config.telefonoWhatsApp || "5491138530778").replace(/[^0-9]/g, "");
+            const baseWspUrl = `https://wa.me/${phoneClean}?text=`;
+
+            document.getElementById("btn-wsp-header").href = `${baseWspUrl}${encodeURIComponent("¡Hola Peretti! Quiero hacer un pedido.")}`;
+            document.getElementById("sticky-wsp-btn").href = `${baseWspUrl}${encodeURIComponent("¡Hola Peretti! Quiero hacer un pedido.")}`;
+
+            // Contenedores
+            const container = document.getElementById("digital-menu-container");
+            const pillsContainer = document.getElementById("category-pills-container");
+            container.innerHTML = "";
+            pillsContainer.innerHTML = "";
+
+            let categoryIndex = 0;
+
+            for (const [categoria, productos] of Object.entries(menuData)) {
+                const productosVisibles = productos.filter(p => p.disponible !== false);
+                if (productosVisibles.length === 0) continue;
+
+                const catSlug = `cat-${categoryIndex}`;
+                const isOpenDefault = (categoryIndex === 0);
+
+                // 1. Crear botón de categoría en la barra pegajosa (Sticky Pill)
+                const pill = document.createElement("button");
+                pill.type = "button";
+                pill.className = `category-pill ${isOpenDefault ? 'active' : ''}`;
+                pill.textContent = categoria;
+                pill.dataset.target = catSlug;
+                pill.addEventListener("click", () => {
+                    handlePillClick(catSlug, pill);
+                });
+                pillsContainer.appendChild(pill);
+
+                // 2. Crear sección Acordeón
+                const section = document.createElement("section");
+                section.className = `accordion-section ${isOpenDefault ? 'is-open' : ''}`;
+                section.id = catSlug;
+
+                // Cabecera interactiva del acordeón
+                const header = document.createElement("button");
+                header.type = "button";
+                header.className = "accordion-header";
+                header.setAttribute("aria-expanded", isOpenDefault ? "true" : "false");
+                header.innerHTML = `
+                    <div class="accordion-header-left">
+                        <h2 class="menu-category-title">${categoria}</h2>
+                        <span class="accordion-count-badge">${productosVisibles.length} ${productosVisibles.length === 1 ? 'plato' : 'platos'}</span>
+                    </div>
+                    <div class="accordion-header-right">
+                        <span class="accordion-toggle-hint">${isOpenDefault ? 'Cerrar' : 'Ver platos'}</span>
+                        <svg class="accordion-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                `;
+
+                // Contenido colapsable
+                const content = document.createElement("div");
+                content.className = "accordion-content";
+
+                const inner = document.createElement("div");
+                inner.className = "accordion-inner";
+
+                const grid = document.createElement("div");
+                grid.className = "menu-dishes-grid";
+
+                productosVisibles.forEach(prod => {
+                    const card = document.createElement("article");
+                    card.className = "dish-card";
+
+                    const wspMessage = encodeURIComponent(`¡Hola Peretti! Quiero pedir: ${prod.nombre} ($${prod.precio.toLocaleString("es-AR")}). ¿Me confirman demora y datos para pagar? 🙌`);
+                    const directOrderUrl = `${baseWspUrl}${wspMessage}`;
+                    const cartAddUrl = `index.html?add=${encodeURIComponent(prod.id)}`;
+
+                    card.innerHTML = `
+                        <div class="dish-media">
+                            <img src="${prod.img}" alt="${prod.nombre}" loading="lazy" onerror="this.src='img/menu/papas.jpg'">
+                            ${prod.badge ? `<span class="dish-badge">${prod.badge}</span>` : ''}
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-title">${prod.nombre}</h3>
+                            <p class="dish-desc">${prod.descripcion || ''}</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$ ${prod.precio.toLocaleString("es-AR")}</span>
+                                <div class="dish-order-actions">
+                                    <a href="${cartAddUrl}" class="btn-dish-order" title="Sumar al carrito con extras">
+                                        🛒 Pedir
+                                    </a>
+                                    <a href="${directOrderUrl}" target="_blank" class="btn-dish-wsp-direct" title="Pedir directo por WhatsApp" aria-label="WhatsApp directo">
+                                        💬
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+
+                inner.appendChild(grid);
+                content.appendChild(inner);
+
+                // Alternar acordeón al hacer clic en el encabezado
+                header.addEventListener("click", () => {
+                    const currentlyOpen = section.classList.contains("is-open");
+                    if (currentlyOpen) {
+                        section.classList.remove("is-open");
+                        header.setAttribute("aria-expanded", "false");
+                        header.querySelector(".accordion-toggle-hint").textContent = "Ver platos";
+                    } else {
+                        section.classList.add("is-open");
+                        header.setAttribute("aria-expanded", "true");
+                        header.querySelector(".accordion-toggle-hint").textContent = "Cerrar";
+                    }
+                });
+
+                section.appendChild(header);
+                section.appendChild(content);
+                container.appendChild(section);
+
+                categoryIndex++;
+            }
+
+            // Sección de Adicionales / Extras
+            if (extrasData && extrasData.length > 0) {
+                const extrasSlug = `cat-extras`;
+                const pillExtras = document.createElement("button");
+                pillExtras.type = "button";
+                pillExtras.className = "category-pill";
+                pillExtras.textContent = "Extras & Adicionales";
+                pillExtras.dataset.target = extrasSlug;
+                pillExtras.addEventListener("click", () => {
+                    handlePillClick(extrasSlug, pillExtras);
+                });
+                pillsContainer.appendChild(pillExtras);
+
+                const extrasSection = document.createElement("section");
+                extrasSection.className = "accordion-section";
+                extrasSection.id = extrasSlug;
+
+                const extrasHeader = document.createElement("button");
+                extrasHeader.type = "button";
+                extrasHeader.className = "accordion-header";
+                extrasHeader.setAttribute("aria-expanded", "false");
+                extrasHeader.innerHTML = `
+                    <div class="accordion-header-left">
+                        <h2 class="menu-category-title">Adicionales / Extras</h2>
+                        <span class="accordion-count-badge">${extrasData.length} opciones</span>
+                    </div>
+                    <div class="accordion-header-right">
+                        <span class="accordion-toggle-hint">Ver opciones</span>
+                        <svg class="accordion-chevron" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                `;
+
+                const extrasContent = document.createElement("div");
+                extrasContent.className = "accordion-content";
+
+                const extrasInner = document.createElement("div");
+                extrasInner.className = "accordion-inner";
+
+                const extrasGrid = document.createElement("div");
+                extrasGrid.className = "menu-dishes-grid";
+                extrasGrid.style.gridTemplateColumns = "repeat(auto-fill, minmax(220px, 1fr))";
+
+                extrasData.forEach(ext => {
+                    const card = document.createElement("div");
+                    card.className = "dish-card";
+                    card.style.cssText = "padding: 14px; display: flex; flex-direction: row; justify-content: space-between; align-items: center;";
+                    card.innerHTML = `
+                        <div>
+                            <h4 style="font-size: 1rem; color: #fff;">+ ${ext.nombre}</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-muted);">Para sumar a tu plato</span>
+                        </div>
+                        <span style="font-family: var(--font-heading); font-size: 1.15rem; color: #fef08a; font-weight: 800;">
+                            $ ${ext.precio.toLocaleString("es-AR")}
+                        </span>
+                    `;
+                    extrasGrid.appendChild(card);
+                });
+
+                extrasInner.appendChild(extrasGrid);
+                extrasContent.appendChild(extrasInner);
+
+                extrasHeader.addEventListener("click", () => {
+                    const currentlyOpen = extrasSection.classList.contains("is-open");
+                    if (currentlyOpen) {
+                        extrasSection.classList.remove("is-open");
+                        extrasHeader.setAttribute("aria-expanded", "false");
+                        extrasHeader.querySelector(".accordion-toggle-hint").textContent = "Ver opciones";
+                    } else {
+                        extrasSection.classList.add("is-open");
+                        extrasHeader.setAttribute("aria-expanded", "true");
+                        extrasHeader.querySelector(".accordion-toggle-hint").textContent = "Cerrar";
+                    }
+                });
+
+                extrasSection.appendChild(extrasHeader);
+                extrasSection.appendChild(extrasContent);
+                container.appendChild(extrasSection);
+            }
+
+            // Manejador de clics en las pills superiores
+            function handlePillClick(targetId, pillElement) {
+                // Actualizar estado activo en pills
+                document.querySelectorAll(".category-pill").forEach(p => p.classList.remove("active"));
+                pillElement.classList.add("active");
+
+                // Centrar la pill en la barra horizontal
+                pillElement.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+
+                // Abrir la sección correspondiente
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    if (!targetSection.classList.contains("is-open")) {
+                        targetSection.classList.add("is-open");
+                        const h = targetSection.querySelector(".accordion-header");
+                        if (h) {
+                            h.setAttribute("aria-expanded", "true");
+                            const hint = h.querySelector(".accordion-toggle-hint");
+                            if (hint) hint.textContent = "Cerrar";
+                        }
+                    }
+
+                    // Scroll suave hasta la sección (descontando la altura de la barra pegajosa)
+                    const stickyBar = document.getElementById("sticky-category-bar");
+                    const offset = stickyBar ? stickyBar.offsetHeight + 12 : 70;
+                    const topPos = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top: topPos, behavior: "smooth" });
+                }
+            }
+
+            // =========================================================
+            // CONTROL INTERACTIVO DE REELS (VIDEO Y AUDIO)
+            // =========================================================
+            const reelCards = document.querySelectorAll(".reel-card");
+            const reelVideos = document.querySelectorAll(".reel-video");
+
+            reelCards.forEach(card => {
+                const video = card.querySelector(".reel-video");
+                const soundBtn = card.querySelector(".reel-sound-btn");
+                const soundIcon = soundBtn ? soundBtn.querySelector(".sound-icon") : null;
+                const videoWrapper = card.querySelector(".reel-video-wrapper");
+
+                if (!video || !videoWrapper) return;
+
+                // Alternar pausa/reproducción al tocar el video
+                videoWrapper.addEventListener("click", (e) => {
+                    if (e.target.closest(".reel-sound-btn") || e.target.closest(".reel-actions-row") || e.target.closest("a")) {
+                        return;
+                    }
+
+                    if (video.paused) {
+                        video.play().catch(() => {});
+                        card.classList.remove("is-paused");
+                    } else {
+                        video.pause();
+                        card.classList.add("is-paused");
+                    }
+                });
+
+                // Control individual de sonido (silencia a los otros al activar uno)
+                if (soundBtn && soundIcon) {
+                    soundBtn.addEventListener("click", (e) => {
+                        e.stopPropagation();
+                        if (video.muted) {
+                            reelVideos.forEach(v => {
+                                v.muted = true;
+                                const otherCard = v.closest(".reel-card");
+                                const otherIcon = otherCard ? otherCard.querySelector(".sound-icon") : null;
+                                if (otherIcon) otherIcon.textContent = "🔇";
+                            });
+                            video.muted = false;
+                            soundIcon.textContent = "🔊";
+                        } else {
+                            video.muted = true;
+                            soundIcon.textContent = "🔇";
+                        }
+                    });
+                }
+            });
+
+            // Reproducción automática inteligente (ahorra batería y datos)
+            if ("IntersectionObserver" in window) {
+                const reelsObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        const vid = entry.target.querySelector("video");
+                        if (!vid) return;
+                        if (entry.isIntersecting) {
+                            if (!entry.target.classList.contains("is-paused")) {
+                                vid.play().catch(() => {});
+                            }
+                        } else {
+                            vid.pause();
+                        }
+                    });
+                }, { threshold: 0.35 });
+
+                reelCards.forEach(card => reelsObserver.observe(card));
+            }
+        });
+    </script>
+</body>
+</html>
