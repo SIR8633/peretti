@@ -93,7 +93,7 @@ const defaultMenuData = {
             nombre: "Sándwich Completo (Mila / Pollo / Lomito)",
             descripcion: "A elección: milanesa de carne, pollo o bife de lomo con jamón, queso, huevo a la plancha, lechuga y tomate.",
             precio: 12000,
-            img: "img/menu/lomito_completo.jpg",
+            img: "img/menu/mila_completo.jpg",
             badge: "Casero",
             disponible: true,
             permiteExtras: true
