@@ -169,7 +169,7 @@ const defaultMenuData = {
             nombre: "Salchipapa Especial Grande",
             descripcion: "Generosa porción de papas fritas crocantes mezcladas con rodajas de salchicha dorada a la plancha.",
             precio: 5500,
-            img: "img/menu/papas_cheddar.jpg",
+            img: "img/menu/salchipapas_cheddar.jpg",
             badge: "Top Salchipapa 🔥",
             disponible: true,
             permiteExtras: true
